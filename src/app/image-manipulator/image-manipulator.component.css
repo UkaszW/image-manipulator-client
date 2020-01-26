@@ -1,0 +1,17 @@
+.center-fit {
+  max-width: 100%;
+  max-height: 70vh;
+  margin: auto;
+}
+
+.rotate-btn {
+  margin: 3px;
+  background-color: #4745bd;
+  color: white;
+}
+
+.gray-btn {
+  margin: 3px;
+  background-color: #812c86;
+  color: white;
+}

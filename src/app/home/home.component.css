@@ -1,0 +1,22 @@
+.h3-welcome {
+  height: 150px;
+  line-height: 150px;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  height: 200px;
+  line-height: 200px;
+  font-size: large;
+  font-weight: bold;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
