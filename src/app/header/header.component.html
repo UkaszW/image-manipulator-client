@@ -6,7 +6,7 @@
   <span>Welcome to {{title}}!</span>
 
   <button mat-button style="position: absolute; right: 5px" [disabled]="dataService.image == null"
-          (click)="dataService.downloadImage()">
+          (click)="openDownloadDialog()">
     <mat-icon>play_for_work</mat-icon>
     Download
   </button>

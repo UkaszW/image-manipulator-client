@@ -12,15 +12,18 @@ import {MatInputModule} from "@angular/material/input";
 import {MatListModule} from "@angular/material/list";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {NgxFileDropModule} from "ngx-file-drop";
-import { HomeComponent } from './home/home.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { FileUploadComponent } from './file-upload/file-upload.component';
+import {HomeComponent} from './home/home.component';
+import {HeaderComponent, ImageDownloadDialog} from './header/header.component';
+import {FooterComponent} from './footer/footer.component';
+import {FileUploadComponent} from './file-upload/file-upload.component';
 import {MatIconModule} from "@angular/material/icon";
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatSliderModule} from "@angular/material/slider";
 import {PinchZoomModule} from "ngx-pinch-zoom";
 import {FileUploadModule} from "ng2-file-upload";
+import {MatDialogModule} from "@angular/material/dialog";
+import {FormsModule} from "@angular/forms";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
 
 @NgModule({
   declarations: [
@@ -29,7 +32,11 @@ import {FileUploadModule} from "ng2-file-upload";
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    FileUploadComponent
+    FileUploadComponent,
+    ImageDownloadDialog
+  ],
+  entryComponents: [
+    ImageDownloadDialog
   ],
   imports: [
     BrowserModule,
@@ -46,7 +53,10 @@ import {FileUploadModule} from "ng2-file-upload";
     MatGridListModule,
     MatSliderModule,
     PinchZoomModule,
-    FileUploadModule
+    FileUploadModule,
+    MatDialogModule,
+    FormsModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

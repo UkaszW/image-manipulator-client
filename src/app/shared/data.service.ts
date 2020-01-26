@@ -40,7 +40,7 @@ export class DataService {
     this.session.clear();
   }
 
-  downloadImage() {
+  downloadImage(fileName: string) {
     let b64toBlob = (b64Data, contentType='', sliceSize=512) => {
       let byteCharacters = atob(b64Data);
       let byteArrays = [];
@@ -62,7 +62,8 @@ export class DataService {
 
     let blob = b64toBlob(this.image.content, this.image.type);
     let blobUrl = window.URL.createObjectURL(blob);
-    let filename : string = this.image.name;
+    let extensionRegex = /(?:\.([^.]+))?$/;
+    let filename : string = fileName + extensionRegex.exec(this.image.name)[0];
     saveAs(blob, filename);
     window.open(blobUrl);
   }
