@@ -1,9 +1,13 @@
 <mat-toolbar color="primary">
-  <button mat-button routerLink="/" style="margin-left: 5px">
+  <button mat-button routerLink="/" style="margin: 5px" (click)="dataService.image = null">
     <mat-icon>home</mat-icon>
   </button>
 
-  <button mat-button style="margin-"
-
   <span>Welcome to {{title}}!</span>
+
+  <button mat-button style="position: absolute; right: 5px" [disabled]="dataService.image == null"
+          (click)="dataService.downloadImage()">
+    <mat-icon>play_for_work</mat-icon>
+    Download
+  </button>
 </mat-toolbar>
