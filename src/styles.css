@@ -1,4 +1,61 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.content-container {
+  margin: 5px auto;
+  width: 100vh;
+  max-width: 1024px;
+  max-height: 700px;
+  text-align: center;
+}
+
+.centered-content {
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100vh;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.centered-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 90%;
+}
+
+.tp-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+.tp-margin {
+  margin: 30px;
+}
+
+.mat-slider-horizontal {
+  width: 300px;
+}
+.mat-slider-vertical {
+  height: 300px;
+}
+
+html, body, app-root, .app-frame {
+  overflow: hidden;
+  margin: 0;
+  height: 100%;
+  box-sizing: border-box;
+  color: #e0e0e0;
+}
