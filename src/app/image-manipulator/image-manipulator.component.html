@@ -1,16 +1,17 @@
-<div class="content-container">
+<block-ui>
+  <div class="content-container">
 
-  <div class="centered-content">
-
-    <table id="tableImage" style="width: 100%">
-      <tr>
+    <div class="centered-content">
+      <table id="tableImage" style="width: 100%">
+        <tr>
           <img class="center-fit" [src]="image">
-      </tr>
-      <tr>
-        <button mat-fab class="rotate-btn" (click)="rotateImage()">Rotate</button>
-        <button mat-fab class="gray-btn">Gray</button>
-      </tr>
-    </table>
-  </div>
+        </tr>
+        <tr>
+          <button mat-fab class="rotate-btn" (click)="rotateImage()">Rotate</button>
+          <button mat-fab class="gray-btn">Gray</button>
+        </tr>
+      </table>
+    </div>
 
-</div>
+  </div>
+</block-ui>

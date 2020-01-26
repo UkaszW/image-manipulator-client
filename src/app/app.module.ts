@@ -24,6 +24,7 @@ import {FileUploadModule} from "ng2-file-upload";
 import {MatDialogModule} from "@angular/material/dialog";
 import {FormsModule} from "@angular/forms";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {BlockUIModule} from "ng-block-ui";
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
     FileUploadModule,
     MatDialogModule,
     FormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    BlockUIModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
