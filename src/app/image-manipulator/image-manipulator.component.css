@@ -10,8 +10,30 @@
   color: white;
 }
 
-.gray-btn {
+.filters-btn {
   margin: 3px;
   background-color: #812c86;
   color: white;
+}
+
+.tuning-btn {
+  margin: 3px;
+  background-color: #86511e;
+  color: white;
+}
+
+.resize-btn {
+  margin: 3px;
+  background-color: #818615;
+  color: white;
+}
+
+.transform-btn {
+  margin: 3px;
+  background-color: #518621;
+  color: white;
+}
+
+image-cropper {
+  max-height: 33vh;
 }

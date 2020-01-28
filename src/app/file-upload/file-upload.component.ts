@@ -10,7 +10,7 @@ import {DataService, Image} from "../shared/data.service";
 })
 export class FileUploadComponent implements OnInit {
 
-  static UPLOAD_URL = "http://localhost:8080/base/upload";
+  static UPLOAD_URL = "/base/upload";
 
   @ViewChild('fileInput') fileInput: ElementRef;
 

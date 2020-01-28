@@ -5,7 +5,12 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpClientModule} from "@angular/common/http";
-import {ImageManipulatorComponent} from './image-manipulator/image-manipulator.component';
+import {
+  FiltersDialog,
+  ImageManipulatorComponent, ResizeDialog,
+  TransformDialog,
+  TuningDialog
+} from './image-manipulator/image-manipulator.component';
 import {MatButtonModule} from "@angular/material/button";
 import {MatCardModule} from "@angular/material/card";
 import {MatInputModule} from "@angular/material/input";
@@ -25,6 +30,9 @@ import {MatDialogModule} from "@angular/material/dialog";
 import {FormsModule} from "@angular/forms";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {BlockUIModule} from "ng-block-ui";
+import {MatOptionModule} from "@angular/material/core";
+import {MatSelectModule} from "@angular/material/select";
+import {ImageCropperModule} from "ngx-image-cropper";
 
 @NgModule({
   declarations: [
@@ -34,10 +42,18 @@ import {BlockUIModule} from "ng-block-ui";
     HeaderComponent,
     FooterComponent,
     FileUploadComponent,
-    ImageDownloadDialog
+    ImageDownloadDialog,
+    FiltersDialog,
+    TuningDialog,
+    TransformDialog,
+    ResizeDialog
   ],
   entryComponents: [
-    ImageDownloadDialog
+    ImageDownloadDialog,
+    FiltersDialog,
+    TuningDialog,
+    TransformDialog,
+    ResizeDialog
   ],
   imports: [
     BrowserModule,
@@ -58,7 +74,10 @@ import {BlockUIModule} from "ng-block-ui";
     MatDialogModule,
     FormsModule,
     MatSnackBarModule,
-    BlockUIModule.forRoot()
+    BlockUIModule.forRoot(),
+    MatOptionModule,
+    MatSelectModule,
+    ImageCropperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

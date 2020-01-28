@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Choose filter</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Filter</mat-label>
+    <mat-select [(value)]="selectedFilter">
+      <mat-option *ngFor="let key of keys" [value]="filters[key]">
+        {{filters[key]}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="cancel()">Cancel</button>
+  <button mat-button (click)="goFilter()">Filter</button>
+</div>

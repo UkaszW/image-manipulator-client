@@ -7,8 +7,24 @@
           <img class="center-fit" [src]="image">
         </tr>
         <tr>
-          <button mat-fab class="rotate-btn" (click)="rotateImage()">Rotate</button>
-          <button mat-fab class="gray-btn">Gray</button>
+          <button mat-fab class="rotate-btn" (click)="rotateImage(ANGLE_LEFT)" title="Rotate left">
+            <mat-icon>rotate_left</mat-icon>
+          </button>
+          <button mat-fab class="rotate-btn" (click)="rotateImage(ANGLE_RIGHT)" title="Rotate right">
+            <mat-icon>rotate_right</mat-icon>
+          </button>
+          <button mat-fab class="filters-btn" title="Filters" (click)="openFiltersDialog()">
+            <mat-icon>photo_filter</mat-icon>
+          </button>
+          <button mat-fab class="tuning-btn" title="Tuning" (click)="openTuningDialog()">
+            <mat-icon>tune</mat-icon>
+          </button>
+          <button mat-fab class="resize-btn" title="Resize" (click)="openResizeDialog()">
+            <mat-icon>photo_size_select_large</mat-icon>
+          </button>
+          <button mat-fab class="transform-btn" title="Crop" (click)="openTransformDialog()">
+            <mat-icon>transform</mat-icon>
+          </button>
         </tr>
       </table>
     </div>

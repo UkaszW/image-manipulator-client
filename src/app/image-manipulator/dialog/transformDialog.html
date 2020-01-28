@@ -1,0 +1,33 @@
+<h1 mat-dialog-title>Crop image</h1>
+<div mat-dialog-content>
+  <button mat-button (click)="zoomOut()">Zoom -</button>
+  <button mat-button (click)="zoomIn()">Zoom +</button>
+
+  <div>
+    <image-cropper
+      [imageBase64]="imageBaseA()"
+      [imageChangedEvent]="imageChangedEvent"
+      [maintainAspectRatio]="true"
+      [containWithinAspectRatio]="containWithinAspectRatio"
+      [aspectRatio]="4 / 3"
+      [resizeToWidth]="256"
+      [cropperMinWidth]="128"
+      [onlyScaleDown]="true"
+      [roundCropper]="false"
+      [canvasRotation]="canvasRotation"
+      [transform]="transform"
+      [alignImage]="'left'"
+      [style.display]="showCropper ? null : 'none'"
+      format="png"
+      (imageCropped)="imageCropped($event)"
+      (imageLoaded)="imageLoaded()"
+      (cropperReady)="cropperReady($event)"
+      (loadImageFailed)="loadImageFailed()"
+    ></image-cropper>
+  </div>
+  <img [src]="croppedImage" [style.border]="croppedImage ? '1px solid black' : 'none'"/>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="cancel()">Cancel</button>
+  <button mat-button (click)="crop()">Crop</button>
+</div>
